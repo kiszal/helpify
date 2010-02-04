@@ -1,0 +1,8 @@
+# please specify page urls and help templates names  which will displayed in these pages  
+# ex:   
+
+#   controller users , action index , template users_index_help.html.erb
+#    'users/index': 'users_index_help'
+
+#   controller users/posts , action edit , template post_edit_help.html.erb  
+#    'users/posts/edit': 'post_edit_help'
