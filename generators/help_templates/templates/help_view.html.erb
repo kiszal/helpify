@@ -1,0 +1,9 @@
+<div id="<%= div_id %>">
+  
+  <%%= link_to_remote "close help", 
+                      :url => closed_helps_path(:object_id => object_id, :object_type => object_type, :url => url ) , 
+                      :method => :post  %>
+
+  help content is going here ...
+
+</div>
