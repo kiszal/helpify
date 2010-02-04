@@ -10,10 +10,10 @@ Run:
 
  ./script/generate helpify
  
-Flie help_settings.yml should be generated in your /config folder. 
+File help_settings.yml should be generated in your /config folder. 
 
-Open it and provide all page urls where help informations should be displayed. 
-Next to each url provide name of a partial which you want to display in this page.
+Open it and provide all page urls where help information should be displayed. 
+Next to each url provide a name of a partial which you want to display in this page.
 
 You will find examples in file help_settings.yml
 
@@ -22,16 +22,16 @@ After that:
  rake db:migrate 
  ./script/generate help_templates
 
-Now you should have new app/views/helps folder in which help templates are generated. 
+Now you should have a new folder app/views/helps in which help templates have been generated. 
 
 Edit each template and customize it according to your needs.
 
 Helpify will display help templates on provided urls specified in help_settings.yml 
 unless user closes it. 
  
-Once user closes help it won't be displayed for him anymore.
+Once user closes help it won't be displayed to him anymore.
    
-In order to display template go to the page and add show_help(object) in the place
+In order to display a template go to the page and add show_help(object) in the place
 you want the help template to by displayed. 
 
 Assuming your object is a current_user. 
@@ -40,7 +40,8 @@ You should add
   
  helpify 
 
-in User model and in each page where help template should be displayed add
+in User model. 
+In each page where help template should be displayed add
 
  show_help(current_user)
 
