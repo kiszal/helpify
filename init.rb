@@ -1,4 +1,4 @@
-require "#{File.dirname(__FILE__)}/config/initializers/help_setting.rb"
+require "#{File.dirname(__FILE__)}/config/initializers/help_settings.rb"
 
 ActionView::Base.send :include, ClosedHelpsHelper
 
