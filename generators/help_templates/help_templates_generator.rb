@@ -12,7 +12,7 @@ class HelpTemplatesGenerator < Rails::Generator::Base
      @template_names.each do |name|
         m.template( 
           "help_view.html.erb",                                                                                                        
-          File.join('app/views/helps/', "_#{name}.html.erb"), :assigns => {:div_id => name} 
+          File.join('app/views/helps/', "_#{name}.html.erb"), :assigns => {:div_id => name}, :collision => :skip
         )          
       end
     end
@@ -21,7 +21,12 @@ class HelpTemplatesGenerator < Rails::Generator::Base
   private 
 
   def help_names 
-    help_partials = YAML.load_file(File.join(RAILS_ROOT, 'config', 'help_setting.yml'))
-    help_partials.to_a.collect{|a| a[1]}
+    file_name = File.join(RAILS_ROOT, 'config', 'help_settings.yml')
+    if File.exists?(file_name)
+      help_partials = YAML.load_file(file_name)
+      help_partials.to_a.collect{|a| a[1]}
+    else 
+      help_partials = []
+    end 
   end
 end
