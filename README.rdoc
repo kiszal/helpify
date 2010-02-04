@@ -50,7 +50,7 @@ Than run:
 
  ./script/generate help_templates
 
-Old templates would not be overriten - the new once would be added. 
+Old templates would not be ovewritten - the new once would be added. 
 
 == Copyright
 
