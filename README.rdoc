@@ -1,0 +1,4 @@
+= Helpify
+
+
+Copyright (c) 2010 kiszal , released under the MIT license
