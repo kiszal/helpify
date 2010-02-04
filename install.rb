@@ -1,3 +1,3 @@
 # Install hook code here
-puts "To create the  model which stores closed help informations please run:"
-puts "script/generate closed_help"
+puts "In order to create model which stores closed help info and help_settings file run::"
+puts "script/generate helpify"
